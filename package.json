@@ -1,0 +1,51 @@
+{
+  "name": "matchudo-eia",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "[ -e .env ] && set -a && . ./.env; next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/material-nextjs": "^5.15.11",
+    "@mui/x-date-pickers": "^7.3.2",
+    "@reduxjs/toolkit": "^2.2.3",
+    "axios": "^1.6.8",
+    "chart.js": "^4.4.2",
+    "cookies-next": "^4.1.1",
+    "dayjs": "^1.11.11",
+    "next": "14.2.0",
+    "react": "^18",
+    "react-chartjs-2": "^5.2.0",
+    "react-data-table-component": "^7.6.2",
+    "react-dom": "^18",
+    "react-drag-drop-files": "^2.3.10",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.51.3",
+    "react-multi-carousel": "^2.8.5",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.4.3",
+    "react-redux": "^9.1.2",
+    "react-toastify": "^10.0.5",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "stripe": "^15.6.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,27 @@
+{{- if .Values.ingress.hostname -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ template "lets-connect.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ template "lets-connect.name" . }}
+    app.kubernetes.io/release: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    {{- range $key, $value := .Values.ingress.annotations }}
+      {{ $key }}: {{ $value | quote }}
+    {{- end }}
+spec:
+  ingressClassName: {{ .Values.ingress.ingressClassName }}
+  rules:
+  - host: {{ .Values.ingress.hostname }}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ template "lets-connect.fullname" . }}
+            port:
+              number: {{ .Values.service.port }}
+        path: /
+        pathType: ImplementationSpecific
+{{- end -}}

@@ -1,0 +1,75 @@
+body {
+  margin: 0px !important;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #635BFF;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #DEEAF6;
+  opacity: 80%;
+
+}
+
+.MuiTabs-indicator {
+  display: none;
+}
+
+/* ------------------ Phone Input Style --------------------- */
+.PhoneInputInput {
+  padding: 18px 14px;
+  border: none;
+  background-color: transparent;
+}
+
+.PhoneInput {
+  border: 1px solid #DEEAF6;
+  margin-top: 12px;
+  border-radius: 4px;
+  padding: 1px 3px;
+}
+
+.PhoneInput:hover {
+  border: 1px solid black;
+}
+
+
+
+.PhoneInput:focus-within {
+  border: 2px solid #635BFF;
+}
+
+.PhoneInputInput {
+  padding: 16px 10px;
+  font-size: 1rem;
+}
+
+.PhoneInputCountry {
+  padding-left: 5px;
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+}
+
+/* ---------------Carousel Padding Issue -------------------- */
+.react-multi-carousel-track {
+  padding-bottom: 0.3rem !important;
+}

@@ -1,0 +1,47 @@
+# Default values for blast.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: "211125700310.dkr.ecr.ap-southeast-1.amazonaws.com/lets-connect-ui-prod"
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 3001
+  targetPort: 3001
+
+environment: prod
+
+eksCluster: aistudio-eks-prod
+
+nodeSelector:
+  aistudio-prod: infra
+
+tolerations: []
+
+affinity: {}
+
+config: {}
+
+hpa:
+  minReplicas: 3
+  maxReplicas: 10
+
+apps:
+  - name: lets-connect-ui-prod
+    command: "npm run start"
+    resources:
+      limits:
+        cpu: 300m
+        memory: 2048Mi
+      requests:
+        cpu: 100m
+        memory: 1024Mi
+
+ingress:
+  ingressClassName: nginx-lets-connect
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: true
+  hostname: lets-connect-ui.5techlab.com
